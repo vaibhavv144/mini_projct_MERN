@@ -77,7 +77,7 @@ const CategoryProduct = () => {
                     >
                       More Details
                     </button>
-                    <button className="btn btn-secondary ms-1 bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-full dark:hover:text-white"
+                    {/* <button className="btn btn-secondary ms-1 bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-full dark:hover:text-white"
                       //  onClick={() => {
                       //   setCart([...cart, p]);
                       //   localStorage.setItem(
@@ -88,7 +88,7 @@ const CategoryProduct = () => {
                       // }}
                       >
                       ADD TO CART
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               ))}
