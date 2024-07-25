@@ -24,7 +24,7 @@ const CreateProduct = () => {
         `http://localhost:8080/api/v1/category/get-category`
       );
       if (data?.success) {
-        setCategories(data?.category);
+        setCategories(data?.categories);
       }
     } catch (error) {
       console.log(error);
@@ -61,6 +61,7 @@ const CreateProduct = () => {
       toast.error("something went wrong");
     }
   };
+  
 
   return (
     <Layout title={"Dashboard-Create Product"}>

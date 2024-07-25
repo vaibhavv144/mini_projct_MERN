@@ -39,7 +39,7 @@ const CreateCategory = () => {
         `http://localhost:8080/api/v1/category/get-category`
       );
       if (data.success) {
-        setCategories(data.category);
+        setCategories(data.categories);
       }
     } catch (error) {
       console.log(error);
@@ -89,6 +89,8 @@ const handleDelete = async (pId) => {
       toast.error("Somtihing went wrong");
     }
   };
+ 
+
 
   return (
     <Layout title={"Dashboard - create category"}>
