@@ -16,10 +16,10 @@ connectDB()
 
 
 
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
+// import { dirname } from 'path';
+// import { fileURLToPath } from 'url';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+// const __dirname = dirname(fileURLToPath(import.meta.url));
 
 //middleware
 app.use(cors())
@@ -32,10 +32,10 @@ app.use('/api/v1/category', CategoryRoutes)
 app.use('/api/v1/product', productRoutes)
 
 
-app.use('*', function(req,res){
-   res.sendFile(path.join(__dirname,'./client/public/index.html'))
+// app.use('*', function(req,res){
+//    res.sendFile(path.join(__dirname,'./client/public/index.html'))
 
-})
+// })
  app.get('/', (req,res)=>{
     res.send({
         message:"welcome to ecommerce"
