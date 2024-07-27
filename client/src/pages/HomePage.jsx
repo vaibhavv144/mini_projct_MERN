@@ -28,7 +28,7 @@ const HomePage = () => {
   const getAllCategories = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/category/get-category`
+        `https://mini-projct-mern.onrender.com/api/v1/category/get-category`
       );
       if (data?.success) {
         setCategories(data?.categories);
@@ -48,7 +48,7 @@ const HomePage = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/product-list/${page}`
+        `https://mini-projct-mern.onrender.com/api/v1/product/product-list/${page}`
       );
       setLoading(false);
       setProducts(data.products);
@@ -62,7 +62,7 @@ const HomePage = () => {
   const getTotal = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/product-count`
+        `https://mini-projct-mern.onrender.com/api/v1/product/product-count`
       );
       setTotal(data?.total);
     } catch (error) {
@@ -80,7 +80,7 @@ const HomePage = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/product-list/${page}`
+        `https://mini-projct-mern.onrender.com/api/v1/product/product-list/${page}`
       );
       setLoading(false);
       setProducts([...products, ...data?.products]);
@@ -113,7 +113,7 @@ const HomePage = () => {
   const filterProduct = async () => {
     try {
       const { data } = await axios.post(
-        `http://localhost:8080/api/v1/product/product-filters`,
+        `https://mini-projct-mern.onrender.com/api/v1/product/product-filters`,
         {
           checked,
           radio,
@@ -185,7 +185,7 @@ const HomePage = () => {
                   key={p._id}
                 >
                   <img
-                    src={`http://localhost:8080/api/v1/product/product-photo/${p._id}`}
+                    src={`https://mini-projct-mern.onrender.com/api/v1/product/product-photo/${p._id}`}
                     className="w-full h-40 object-cover"
                     alt={p.name}
                   />

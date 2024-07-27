@@ -14,7 +14,7 @@
 //   const [auth, setAuth] = useAuth();
 //   const getOrders = async () => {
 //     try {
-//       const { data } = await axios.get(`http://localhost:8080/api/v1/auth/orders`);
+//       const { data } = await axios.get(`https://mini-projct-mern.onrender.com/api/v1/auth/orders`);
 //       setOrders(data);
 //     } catch (error) {
 //       console.log(error);
@@ -103,7 +103,7 @@ const Orders = () => {
 
   const getOrders = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:8080/api/v1/auth/orders`);
+      const { data } = await axios.get(`https://mini-projct-mern.onrender.com/api/v1/auth/orders`);
       setOrders(data);
     } catch (error) {
       console.log(error);
@@ -145,7 +145,7 @@ const Orders = () => {
                     <div key={j} className="flex mb-4 p-3 bg-white rounded-lg shadow-md w-full md:w-1/3 ml-72">
                       <div className="w-1/3 ">
                         <img
-                          src={`http://localhost:8080/api/v1/product/product-photo/${p._id}`}
+                          src={`https://mini-projct-mern.onrender.com/api/v1/product/product-photo/${p._id}`}
                           className="object-cover w-full h-24 rounded"
                           alt={p.name}
                         />
